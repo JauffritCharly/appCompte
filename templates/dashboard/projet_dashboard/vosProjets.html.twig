@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-dasboard">
+
+        {#       ------------------ Barre de navigation ------------------- -#}
+
+        <nav class="side-nav">
+            <div class="wrapper">
+                <div class="titre-app-dashboard">
+                    <h3>COMPTAPP</h3>
+                </div>
+                <div class="imgCompte">
+                    {% if app.user.imageCompte == null %}
+                        <img src="{{ asset('media/profil.png') }}" alt="">
+                    {% else %}
+                        <img src="{{ asset('/uploads/' ~app.user.imageCompte) }}" alt="">
+                    {% endif %}
+                </div>
+                <div class="bienvenus-dashboard">
+                    <div id="welcome"><p>Welcome back</p></div>
+                    <div id="welcome-Nom"><p>{{ app.user.prenom | upper }} {{ app.user.nom | upper }}</p></div>
+                </div>
+                <div class="argent-economise">
+                    {% if  argentEconomieTotal != null %}
+                        <div class="chiffre-economise"><p>{{ argentEconomieTotal }}€</p></div>
+                    {% else %}
+                        <div class="chiffre-economise"><p>0€</p></div>
+                    {% endif %}
+                    <div><p>Total mis de cotées</p></div>
+                </div>
+                <div class="nav-bloc-container">
+                    <div class="nav-bloc">
+                        <div class="logo-menu">
+                            <img src="{{ asset('media/tableau de bord.png') }}" alt="">
+                        </div>
+                        <div class="label-nav">
+                            <a href="{{ path('app_dashboard') }}">Tableau de bord</a>
+                        </div>
+                    </div>
+                    <div class="nav-bloc">
+                        <div class="logo-menu">
+                            <img src="{{ asset('media/lancement-du-projet.png') }}" alt="">
+                        </div>
+                        <div class="label-nav">
+                            <a href="{{ path('app_dashboard_projets') }}">Vos Projets</a>
+                        </div>
+                    </div>
+                    <div class="nav-bloc">
+                        <div class="logo-menu">
+                            <img src="{{ asset('media/avertissement.png') }}" alt="">
+                        </div>
+                        <div class="label-nav">
+                            <a href="#">Vos dépenses</a>
+                        </div>
+                    </div>
+                    <div class="nav-bloc">
+                        <div class="logo-menu">
+                            <img src="{{ asset('media/revenus.png') }}" alt="">
+                        </div>
+                        <div class="label-nav">
+                            <a href="#">Vos revenus</a>
+                        </div>
+                    </div>
+                    <div class="nav-bloc logout">
+                        <div class="logo-menu">
+                            <img src="{{ asset('media/logout.png') }}" alt="">
+                        </div>
+                        <div>
+                            <a href="{{ path('app_logout') }}">DECONNEXION</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="bandeau"></div>
+
+        {#       --------------------------- Récapitulatif ----------------------------------- -#}
+
+
+        <div class="recapitulatif-container">
+            <div class="titre-menu">
+                <p>Vos projets</p>
+            </div>
+            <div class="recapitulatif">
+                <div class="imageAjouterProjet">
+                    <a href="{{ path('app_ajouter_projet') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" data-name="Layer 1">
+                            <path d="m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 22a10 10 0 1 1
+                        10-10 10.011 10.011 0 0 1 -10 10zm5-10a1 1 0 0 1 -1 1h-3v3a1 1 0 0 1 -2
+                        0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2
+                        0v3h3a1 1 0 0 1 1 1z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="infos-recapitulatif" id="infoRecap">
+                    {% if infoProjetsUser != null %}
+                        {% for projet in infoProjetsUser %}
+                            <div class="containerProjetlist">
+                                <div class="nomProjet">
+                                    <p>Projet : {{ projet.nomProjet | upper }}</p>
+                                </div>
+                                <div class="montantProjet">
+                                    <p>Montant : {{ projet.montantProjet }}€</p>
+                                </div>
+                                <div class="tempsProjet">
+                                    <p>Temps : {{ projet.tempsProjet }} mois
+                                        <span>(pour atteindre votre objectif)</span></p>
+                                </div>
+                                <div class="iconesProjet">
+                                    <div class="supprimer">
+                                        <a href="{{ path('app_supprimer_projet', {'projet': projet.id}) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="img1"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                <g id="surface133773378">
+                                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,0%,0%);fill-opacity:1;"
+                                                          d="M 10 2 L 9 3 L 4 3 L 4 5 L 20 5 L 20 3 L 15 3 L 14 2 Z M 5 7 L 5 22 L 19 22
+                                                      L 19 7 Z M 8 9 L 10 9 L 10 20 L 8 20 Z M 14 9 L 16 9 L 16 20 L 14 20 Z M 14 9 "/>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="valider">
+                                        <button class="btnValiderProjet">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="img2">
+                                                <path fill="#c8e6c9"
+                                                      d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/>
+                                                <path fill="#4caf50"
+                                                      d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>Vous avez aucun projet pour le moment</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

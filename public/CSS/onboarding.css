@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.containerOnboarding {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.partieGaucheOnboarding {
+    width: 42%;
+    height: 100vh;
+    background: #eaf3fa;
+}
+
+.divOnboardingImg {
+    width: 50%;
+    position: absolute;
+    right: 57%;
+    top: 35%;
+}
+
+.imgOnboarding {
+    width: 100%;
+    height: auto;
+}
+
+.partieDroiteOnboarding {
+    display: flex;
+    justify-content: center;
+    width: 58%;
+}
+
+.texte {
+    margin-top: 160px;
+    width: 90%;
+    height: 40%;
+}
+
+.texte #pseudo {
+    font-weight: bolder;
+}
+
+.etape {
+    font-size: 15px;
+    color: #AAAAAA;
+    margin-bottom: 10px;
+}
+
+.bienvenus {
+    font-size: 30px;
+    margin: 5px 0 15px 0;
+}
+
+.phraseAccueil {
+    color: #707070;
+    width: 90%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.formulaire input {
+    font-size: 20px;
+    font-weight: bolder;
+    width: 200px;
+    height: 40px;
+    background-color: #eaf3fa;
+    border: solid 2px #c0d8fc;
+    border-radius: 5px;
+}
+
+.formulaire input:focus {
+    outline: none;
+    border: solid 2.5px #4e8ff6;
+}
+
+.questionPartie1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#questionnaire_form_salaire.active {
+    border: solid 2px #f80505;
+}
+
+.phrase-remplir-champs {
+    display: none;
+    color: #f80505;
+    margin-left: 280px;
+}
+
+.btnTerminer {
+    display: none;
+    cursor: pointer;
+}
+
+.questionPartie2 {
+    font-size: 25px;
+    display: none;
+}
+
+#questionSuivante {
+    margin: 40px 0 0 65%;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: #f1f1f1;
+    border-radius: 5px;
+    border: none;
+    background-color: #85a7ff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#questionSuivante:hover {
+    transform: translate(-2px, -4px);
+    box-shadow: 3px 2px 4px 0 rgba(65, 65, 65, 0.5);
+    background: #5e85fa;
+}
+
+.container-autreRevenus {
+    font-size: 25px;
+}
+
+.autreRevenus {
+    display: none;
+}
+
+.container-oui-non {
+    display: flex;
+    text-align: center;
+    margin: 10px 0 25px 0;
+}
+
+.btn-Reponse-oui-non {
+    margin: 0 10px 0 0;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eaf3fa;
+    border: solid 2px #c0d8fc;
+}
+
+.btn-Reponse-oui-non:hover {
+    border: solid 2px #5794f6;
+}
+
+.btn-Reponse-oui-non a {
+    color: #212121;
+    text-decoration: none;
+}
+
+.btnReponse-clique {
+    background: #5794F6FF;
+    /*border: none;*/
+}
+
+#enSavoirPlus {
+    display: flex;
+    align-items: center;
+}
+
+#enSavoirPlus a {
+    color: #707070FF;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#enSavoirPlus a:hover {
+    color: #84a6fe;
+}
+
+.autredepense {
+    display: none;
+    font-size: 25px;
+}
+
+.btnTerminer {
+    margin: 40px 0 0 500px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: #f1f1f1;
+    border-radius: 5px;
+    border: none;
+    background-color: #85a7ff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnTerminer:hover {
+    transform: translate(-2px, -4px);
+    box-shadow: 3px 2px 4px 0 rgba(65, 65, 65, 0.5);
+    background: #5e85fa;
+}
+
+.input-autreRevenus-depense {
+    margin-top: 15px;
+}
+
+.depenseRecurente {
+    align-items: center;
+    display: flex;
+}
+
+.depenseRecurente a {
+    color: #707070FF;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.methodeEconomieContainer {
+    display: none;
+    font-size: 25px;
+}
+
+.methodeEconomieContainer select {
+    padding: 8px 0;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.question-type-acquisition-container {
+    display: none;
+    font-size: 25px;
+}
+
+.typeAcquisitionContainer {
+    display: none;
+    font-size: 25px;
+}
+
+.typeAcquisitionContainer select {
+    padding: 8px 0;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.label-prix-acquisition {
+    margin: 20px 0 10px 0;
+}
+
+.btnDeconnexion {
+    z-index: 1;
+    margin-left: 75%;
+    transition: all 0.2s;
+}
+
+.btnDeconnexion a {
+    color: #4e8ff6;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btnDeconnexion a:hover {
+    color: #1168f5;
+    font-size: 15.5px;
+}
+
+/* ---------  Css de la Modal autre revenus : ---------*/
+
+.container-modal1 {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.container-modal1.active {
+    transition: visibility 0s;
+    visibility: visible;
+}
+
+.overlay1 {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.container-modal1.active .overlay1 {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal1 {
+    opacity: 0;
+    width: 95%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+
+}
+
+.container-modal1.active .modal1 {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out,
+    transform 0.4s 0.2s ease-out;
+}
+
+.close-modal1 {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.modal1 h3 {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.modal1 li {
+    line-height: 1.4;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+
+/* ---------  Css de la Modal depense recurentes : ---------*/
+
+.container-modal2 {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.container-modal2.active {
+    transition: visibility 0s;
+    visibility: visible;
+}
+
+.overlay2 {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.container-modal2.active .overlay2 {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal2 {
+    opacity: 0;
+    width: 95%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+
+}
+
+.container-modal2.active .modal2 {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out,
+    transform 0.4s 0.2s ease-out;
+}
+
+.close-modal2 {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.modal2 h3 {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.modal2 li {
+    line-height: 1.4;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+

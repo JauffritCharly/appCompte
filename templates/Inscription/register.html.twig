@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="container-inscription">
+        <div class="enTete">
+            <div class="logo">
+                <img class="imgLogo" src="{{ asset('media/logo.png') }}" alt="">
+            </div>
+            <div class="titreApp">
+                <h2>COMPTAPP</h2>
+            </div>
+        </div>
+        <div class="imgConnexion">
+            <img src="{{ asset('media/imgconnexion.jpg') }}" alt="">
+        </div>
+        <div class="containerForm containerFormInscription">
+            <h3>Inscription</h3>
+            {{ form_start(formInscription) }}
+            <div id="inscriptionPartie1">
+                <div class="input-container">
+                    <div>
+                        {{ form_widget(formInscription.email) }}
+                    </div>
+                    <div class="icone verif">
+                        <img class="img-valide" src="{{ asset('media/verifier.png') }}" alt="">
+                        <img class="icone-error" src="{{ asset('media/alerte.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input class="form-input" id="repeterEmail" type="text" placeholder="Répéter votre Email">
+                    <div class="icone verif">
+                        <img class="img-valide" src="{{ asset('media/verifier.png') }}" alt="">
+                        <img class="icone-error" src="{{ asset('media/alerte.png') }}" alt="">
+                    </div>
+                    <div class="msg-Error">
+                        <span>Votre Email n'est pas identique</span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="pswd">
+                        {{ form_widget(formInscription.plainPassword) }}
+                    </div>
+                    <div class="icone verif">
+                        <img class="img-valide" src="{{ asset('media/verifier.png') }}" alt="">
+                        <img class="icone-error" src="{{ asset('media/alerte.png') }}" alt="">
+                    </div>
+                    <div class="msgPswd">
+                        <span>Au moins 1 symbole, un chiffre, ainsi que 6 caractères minimum</span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input class="form-input" id="repeterPassword" type="password" placeholder="Confirmer Mot de Passe">
+                    <div class="icone verif2">
+                        <img class="img-valide" src="{{ asset('media/verifier.png') }}" alt="">
+                        <img class="icone-error" src="{{ asset('media/alerte.png') }}" alt="">
+                    </div>
+
+                </div>
+                <div>
+                    <button type="button" id="btnSuivantInscription">Suivant</button>
+                </div>
+                <div class="btn-Connection-Retour-FormInscription">
+                    <a href="{{ path('app_login') }}">Se Connecter</a>
+                </div>
+            </div>
+            <div id="inscriptionPartie2">
+                {{ form_widget(formInscription.nom) }}
+                {{ form_widget(formInscription.prenom) }}
+                <div class="containerAjoutImage">
+                    {{ form_label(formInscription.imageCompte) }}
+                    {{ form_widget(formInscription.imageCompte) }}
+                </div>
+                <div class="imgCompteInscription">
+                    <img src="{{ asset('media/profil.png') }}" alt="">
+                </div>
+                {{ form_row(formInscription.agreeTerms) }}
+                {{ form_widget(formInscription.send) }}
+                <div class="btn-Connection-Retour-FormInscription">
+                    <a class="btnRetour" href="#">Retour</a>
+                </div>
+            </div>
+            {{ form_end(formInscription) }}
+        </div>
+    </div>
+{% endblock %}

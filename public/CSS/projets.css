@@ -1,0 +1,80 @@
+.projet {
+    font-size: 20px;
+}
+
+.imageAjouterProjet {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+svg#Layer_1 {
+    fill: #4e8ff6;
+    height: auto;
+    width: 30px;
+    cursor: pointer;
+}
+
+.containerProjetlist {
+    display: flex;
+    font-size: 20px;
+    height: 50px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: solid 2px rgba(128, 128, 128, 0.38);
+    border-radius: 5px;
+}
+
+.containerProjetlist.active {
+    border: solid 2px rgb(48, 246, 4);
+}
+
+.nomProjet {
+    width: 30%;
+    margin-left: 5px;
+}
+
+.montantProjet {
+    width: 25%;
+}
+
+.tempsProjet {
+    width: 40%;
+}
+
+.tempsProjet span {
+    font-size: 12px;
+}
+
+.iconesProjet {
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.supprimer {
+    height: 30px;
+    width: 30px;
+}
+
+svg#img1 {
+    height: auto;
+    width: 30px;
+    cursor: pointer;
+}
+
+.valider {
+    height: 35px;
+    width: 35px;
+}
+
+.valider button {
+    border: none;
+}
+
+svg#img2 {
+    height: auto;
+    width: 35px;
+    cursor: pointer;
+}

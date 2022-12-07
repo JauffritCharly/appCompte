@@ -1,0 +1,277 @@
+.container-inscription {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+
+.containerFormInscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: -2;
+    right: 10%;
+    top: 5%;
+    height: 600px;
+    width: 500px;
+    background: #ecf1fe;
+    border-radius: 10px;
+    box-shadow: 4px 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.containerFormInscription.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    33% {
+        transform: translateX(-5px);
+    }
+    66% {
+        transform: translate(5px);
+    }
+}
+
+#inscriptionPartie2 {
+    display: none;
+}
+
+.containerAjoutImage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.containerAjoutImage p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+.containerAjoutImage label {
+    color: #1168f5;
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.accepterTermes {
+    margin: 50px 0 10px 5px;
+}
+
+.containerForm .btnTerminerInscription {
+    margin-top: 0;
+}
+
+.imgCompteInscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+.imgCompteInscription img {
+    border-radius: 10%;
+    height: 90px;
+    width: 90px;
+    border: solid 1px white;
+    box-shadow: -1px 10px 26px -10px #000000;;
+}
+
+.btn-Connection-Retour-FormInscription {
+    margin-top: 10px;
+}
+
+.btn-Connection-Retour-FormInscription a {
+    text-decoration: none;
+    color: #4e8ff6;
+    font-size: 20px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.img-valide {
+    width: 30px;
+    height: auto;
+    display: none;
+}
+
+.icone-error {
+    width: 30px;
+    height: auto;
+    display: none;
+}
+
+.verif {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.verif2 {
+    position: absolute;
+    top: 32%;
+    right: 10%;
+}
+
+.msg-Error {
+    position: absolute;
+    display: none;
+    font-size: 15px;
+    top: 87%;
+    color: red;
+}
+
+.msgPswd {
+    position: absolute;
+    font-size: 14px;
+    top: 87%;
+    color: rgba(112, 112, 112, 0.66);
+}
+
+
+@media screen and (max-width: 1025px) {
+    .containerFormInscription {
+        right: 10%;
+        top: 5%;
+        height: 500px;
+        width: 400px;
+    }
+
+    .containerFormInscription button {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .msgPswd {
+        font-size: 13px;
+        margin-top: -5px;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    .containerFormInscription {
+        left: 20%;
+        top: 15%;
+        height: 80%;
+        width: 60%;
+    }
+
+    .containerFormInscription input {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .containerFormInscription input::placeholder {
+        font-size: 20px;
+    }
+
+    .containerFormInscription button {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .msgPswd {
+        font-size: 13px;
+        margin-top: -5px;
+    }
+
+    .accepterTermes {
+        margin: 10px 0 10px 5px;
+    }
+
+    .containerAjoutImage {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .containerAjoutImage label {
+        margin: 0;
+    }
+
+    .btn-Connection-Retour-FormInscription {
+        margin-top: 5px;
+    }
+
+    #inscriptionPartie2 input {
+        width: 75%;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+
+    .containerFormInscription {
+        left: 10%;
+        top: 18%;
+        height: 80%;
+        width: 80%;
+    }
+
+    .containerFormInscription input {
+        width: 100%;
+    }
+
+    .containerFormInscription input::placeholder {
+        font-size: 18px;
+    }
+
+    .containerFormInscription button {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .msgPswd {
+        font-size: 13px;
+        margin-top: -5px;
+    }
+
+    .accepterTermes {
+        margin: 10px 0 10px 5px;
+    }
+
+    .containerAjoutImage {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .containerAjoutImage label {
+        margin: 0;
+    }
+
+    .btn-Connection-Retour-FormInscription {
+        margin-top: 5px;
+    }
+
+    .msgPswd {
+        font-size: 10px;
+    }
+
+    #inscriptionPartie2 input {
+        width: 90%;
+    }
+}
+
+
+
+
+
+

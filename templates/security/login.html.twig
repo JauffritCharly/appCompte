@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="containerConnexion">
+        <div class="enTete">
+            <div class="logo">
+                <img class="imgLogo" src="{{ asset('media/logo.png') }}" alt="">
+            </div>
+            <div class="titreApp">
+                <h2>COMPTAPP</h2>
+            </div>
+        </div>
+        <div class="imgConnexion">
+            <img src="{{ asset('media/imgconnexion.jpg') }}" alt="">
+        </div>
+        <div class="containerForm">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <div>
+                    <h3 class="h3 mb-3 font-weight-normal">SE CONNECTER</h3>
+                </div>
+                <div>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-input"
+                           autocomplete="email" required autofocus placeholder="Email">
+                </div>
+                <input type="password" name="password" id="inputPassword" class="form-input"
+                       autocomplete="current-password"
+                       required placeholder="Mot de Passe">
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+                {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+                #}
+                <div class="btn-connexion">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="_remember_me">
+                        </label>
+                        <p>Se souvenir de moi</p>
+                    </div>
+                    <div>
+                        <p>Mot de passe oublié ?</p>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">
+                    Se Connecter
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

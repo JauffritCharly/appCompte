@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container-dasboard">
+        <div class="bandeau"></div>
+
+        <div class="container-form-ajouterProjet">
+            <div class="titre-ajouter-projet">
+                <p>Ajouter Projet</p>
+            </div>
+            <div>
+                {{ form_start(formProjet) }}
+                <div class="label-ajouter-projet">
+                    {{ form_label(formProjet.nomProjet) }}
+                </div>
+                <div class="input-ajouterProjet">
+                    {{ form_widget(formProjet.nomProjet) }}
+                </div>
+                <div class="prix">
+                    <div class="label-ajouter-projet">
+                        {{ form_label(formProjet.montantProjet) }}
+                    </div>
+                    <div class="input-ajouterProjet">
+                        {{ form_widget(formProjet.montantProjet) }}
+                    </div>
+                    <div class="div-btn-ajouterProjet">
+                        {{ form_widget(formProjet.send) }}
+                    </div>
+                </div>
+                <div class="retour-projet">
+                    <a href="{{ path('app_dashboard_projets') }}">Retour</a>
+                </div>
+                {{ form_end(formProjet) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

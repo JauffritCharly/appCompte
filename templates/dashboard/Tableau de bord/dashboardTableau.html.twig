@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    {% if app.user %}
+        <div class="container-dasboard">
+
+            {#       ------------------ Barre de navigation ------------------- -#}
+
+            <nav class="side-nav">
+                <div class="wrapper">
+                    <div class="titre-app-dashboard">
+                        <h3>COMPTAPP</h3>
+                    </div>
+                    <div class="imgCompte">
+                        {% if app.user.imageCompte == null %}
+                            <img src="{{ asset('media/profil.png') }}" alt="">
+                        {% else %}
+                            <img src="{{ asset('/uploads/' ~app.user.imageCompte) }}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="bienvenus-dashboard">
+                        <div id="welcome"><p>Welcome back</p></div>
+                        <div id="welcome-Nom"><p>{{ app.user.prenom | upper }} {{ app.user.nom | upper }}</p></div>
+                    </div>
+                    <div class="argent-economise">
+                        {% if  argentEconomieTotal != null %}
+                            <div class="chiffre-economise"><p>{{ argentEconomieTotal }}€</p></div>
+                        {% else %}
+                            <div class="chiffre-economise"><p>0€</p></div>
+                        {% endif %}
+                        <div><p>Total mis de cotées</p></div>
+                    </div>
+                    <div class="nav-bloc-container">
+                        <div class="nav-bloc">
+                            <div class="logo-menu">
+                                <img src="{{ asset('media/tableau de bord.png') }}" alt="">
+                            </div>
+                            <div class="label-nav">
+                                <a href="{{ path('app_dashboard') }}">Tableau de bord</a>
+                            </div>
+                        </div>
+                        <div class="nav-bloc">
+                            <div class="logo-menu">
+                                <img src="{{ asset('media/lancement-du-projet.png') }}" alt="">
+                            </div>
+                            <div class="label-nav">
+                                <a href="{{ path('app_dashboard_projets') }}">Vos projets</a>
+                            </div>
+                        </div>
+                        <div class="nav-bloc">
+                            <div class="logo-menu">
+                                <img src="{{ asset('media/avertissement.png') }}" alt="">
+                            </div>
+                            <div class="label-nav">
+                                <a href="#">Vos dépenses</a>
+                            </div>
+                        </div>
+                        <div class="nav-bloc">
+                            <div class="logo-menu">
+                                <img src="{{ asset('media/revenus.png') }}" alt="">
+                            </div>
+                            <div class="label-nav">
+                                <a href="#">Vos revenus</a>
+                            </div>
+                        </div>
+                        <div class="nav-bloc logout">
+                            <div class="logo-menu">
+                                <img src="{{ asset('media/logout.png') }}" alt="">
+                            </div>
+                            <div>
+                                <a href="{{ path('app_logout') }}">DECONNEXION</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="bandeau"></div>
+
+
+            {#       --------------------------- Récapitulatif ----------------------------------- -#}
+
+
+            <div class="recapitulatif-container">
+                <div class="titre-menu">
+                    <p>Tableau de bord</p>
+                </div>
+                <div class="recapitulatif">
+                    <div class="infos-recapitulatif">
+                        <p>Au cours de l'année vous aurez reçu un total de : <span
+                                    class="nombre">{{ revenusFinAnnee }}€</span></p>
+                    </div>
+                    <div class="infos-recapitulatif">
+                        <p> Vous aurez économisée a la fin de l'année : <span
+                                    class="nombre">{{ argentEconomiseAnneeArrondi }}€</span><span
+                                    id="methodeEconomie"> (en respectant la méthode d'économie de {{ methodeEconomie }}% chaque mois)</span>
+                        </p>
+                    </div>
+                    <div class="add-economie">
+                        <div>
+                            {{ form_start(formArgentEco) }}
+                        </div>
+                        <div>
+                            {{ form_label(formArgentEco.economie) }}
+                        </div>
+                        <div id="label-argent-eco">
+                            {{ form_widget(formArgentEco.economie) }}
+                            <p>€</p>
+                            <div>
+                                {{ form_end(formArgentEco) }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,72 @@
+.container-form-ajouterProjet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre-ajouter-projet {
+    font-size: 30px;
+    margin: 10px 0 30px;
+}
+
+.label-ajouter-projet {
+    font-size: 25px;
+    margin: 10px 0 20px 0;
+}
+
+.prix {
+    margin: 40px 0 0 0;
+}
+
+.input-ajouterProjet input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: solid 1px #4e8ff6;
+}
+
+.input-ajouterProjet input:focus {
+    border: solid 3px #4e8ff6;
+    outline: none;
+}
+
+.input-ajouterProjet input::placeholder {
+    font-size: 20px;
+    color: #AAAAAA;
+}
+
+.div-btn-ajouterProjet {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnAjouterProjet {
+    width: 200px;
+    height: 45px;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #f1f1f1;
+    background: #7396fd;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.retour-projet {
+    display: flex;
+    justify-content: center;
+}
+
+
+.retour-projet a {
+    text-decoration: none;
+    color: #4e8ff6;
+    font-size: 25px;
+    margin-top: 5px;
+}

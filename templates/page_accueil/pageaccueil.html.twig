@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="enTete">
+        <div class="logo">
+            <img class="imgLogo" src="{{ asset('media/logo.png') }}" alt="">
+        </div>
+        <div class="titreApp">
+            <h2>COMPTAPP</h2>
+        </div>
+        <div class="btn-accueil">
+            <div class="btnInscriptionHeader">
+                <a href="{{ path('app_register') }}">S'inscrire</a>
+            </div>
+            <div class="btnConnexionHeader">
+                <a href="{{ path('app_login') }}">Se connecter</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="imgHome">
+            <img src="{{ asset('media/imghome.jpg') }}" alt="">
+        </div>
+        <div class="partieGauche">
+            <div class="phraseAccroche">
+                <h1>L'Application qui t'aide a faire des <span class="economie">ECONOMIES</span> !!</h1>
+            </div>
+            <div class="phraseBis">
+                <h2>Faites des économies mois après mois</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

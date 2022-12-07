@@ -1,0 +1,129 @@
+.enTete {
+    position: absolute;
+    margin: 20px 0 0 15px;
+    display: flex;
+    align-items: center;
+    width: 96%;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+}
+
+.imgLogo {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.titreApp {
+    height: auto;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.titreApp h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.btnInscriptionHeader {
+    z-index: 1;
+    transition: all 0.2s;
+}
+
+.btnInscriptionHeader a {
+    color: #f1f1f1;
+    font-size: 20px;
+    text-decoration: none;
+    background: #4e8ff6;
+    padding: 8px 35px;
+    border-radius: 7px;
+    transition: all 0.2s;
+}
+
+.btnInscriptionHeader a:hover {
+    box-shadow: 3px 2px 4px 0 rgba(65, 65, 65, 0.5);
+}
+
+.btnInscriptionHeader:hover {
+    transform: translate(-2px, -4px);
+}
+
+.btnConnexionHeader {
+    z-index: 1;
+    transition: all 0.2s;
+}
+
+.btnConnexionHeader a {
+    color: #4e8ff6;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.btnConnexionHeader a:hover {
+    color: #1168f5;
+}
+
+.btn-accueil {
+    width: 300px;
+    height: 60px;
+    margin-left: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1500px) {
+    .btn-accueil {
+        margin-left: 60%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .btn-accueil {
+        margin-left: 55%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .btn-accueil {
+        margin-left: 50%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .btn-accueil {
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .btn-accueil {
+        margin-left: 30%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .enTete {
+        position: absolute;
+        margin: 10px 0 0 15px;
+        display: flex;
+        width: 96%;
+        flex-direction: column;
+    }
+
+    .btn-accueil {
+        display: flex;
+        margin: 55% 0 30px 0;
+        flex-direction: column;
+    }
+}
+
+
+
+

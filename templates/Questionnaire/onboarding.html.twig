@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="containerOnboarding">
+    <div class="enTete">
+        <div class="logo">
+            <img class="imgLogo" src="{{ asset('media/logo.png') }}" alt="">
+        </div>
+        <div class="titreApp">
+            <h2>COMPTAPP</h2>
+        </div>
+        <div class="btnDeconnexion">
+            <a href="{{ path('app_logout') }}">SE DECONNECTER</a>
+        </div>
+    </div>
+    <div class="partieGaucheOnboarding">
+        <div class="divOnboardingImg">
+            <img class="imgOnboarding" src="{{ asset('media/7849-removebg-preview.png') }}" alt="">
+        </div>
+    </div>
+    <div class="partieDroiteOnboarding">
+        <div class="texte">
+            <div class="etape">
+                <p>Etape <span id="numeroEtape">1</span>/4 </p>
+            </div>
+            <div class="bienvenus">
+                <p>Bonjour <span id="pseudo">{{ app.user.prenom | upper }}</span></p>
+            </div>
+            <div class="phraseAccueil">
+                <p>Afin de pouvoir utiliser ComptApp, veuillez répondre aux quelques questions suivantes :</p>
+            </div>
+            <div class="formulaire">
+                {{ form_start(questonnaireForm) }}
+                <div class="questionPartie1">
+                    {{ form_label(questonnaireForm.salaire) }}
+                    {{ form_widget(questonnaireForm.salaire) }}
+                </div>
+                <div class="phrase-remplir-champs">
+                    <p>Veuillez remplir le champs</p>
+                </div>
+                <div class="container-autreRevenus">
+                    <div class="autreRevenus">
+                        <div id="enSavoirPlus">
+                            <p>Touchez vous d'autre revenus ?</p>
+                            <a href="#" class="modal-trigger1">En savoir plus</a>
+                        </div>
+                        <div class="container-oui-non">
+                            <div class="btn-Reponse-oui-non btn-reponse-oui-revenus">
+                                <a href="#" class="oui">OUI</a>
+                            </div>
+                            <div class="btn-Reponse-oui-non btn-reponse-non-revenus">
+                                <a href="#" class="non">NON</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questionPartie2">
+                        <div>
+                            {{ form_label(questonnaireForm.autreRevenus) }}
+                        </div>
+                        <div class="input-autreRevenus-depense">
+                            {{ form_widget(questonnaireForm.autreRevenus) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="autredepense">
+                    <div class="questionPartie3">
+                        <div class="depenseRecurente">
+                            {{ form_label(questonnaireForm.depenses) }}
+                            <a href="#" class="modal-trigger2">En savoir plus</a>
+                        </div>
+                        <div class="input-autreRevenus-depense">
+                            {{ form_widget(questonnaireForm.depenses) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="methodeEconomieContainer">
+                    <div class="label-methode-Economie">
+                        {{ form_label(questonnaireForm.methodeEconomie) }}
+                    </div>
+                    <div>
+                        {{ form_widget(questonnaireForm.methodeEconomie) }}
+                    </div>
+                </div>
+                <div>
+                    {{ form_end(questonnaireForm) }}
+                </div>
+            </div>
+            <div>
+                <button id="questionSuivante">SUIVANT</button>
+            </div>
+        </div>
+    </div>
+
+    {#    ----- Modale autre revenus : ----- #}
+
+    <div class="container-modal1">
+        <div class="overlay1 modal-trigger1"></div>
+        <div class="modal1">
+            <button class="close-modal1 modal-trigger1">X</button>
+            <h3>Exemple d'autre revenus :</h3>
+            <ul>
+                <li>Bonus Annuel</li>
+                <li>13éme mois</li>
+                <li>Allocation Familliale</li>
+                <li>Prime à l'embauche</li>
+                <li>Retraite</li>
+                <li>Deuxième salaire</li>
+            </ul>
+        </div>
+    </div>
+
+    {#    ----- Modale depense recurentes : ----- #}
+
+    <div class="container-modal2">
+        <div class="overlay2 modal-trigger2"></div>
+        <div class="modal2">
+            <button class="close-modal2 modal-trigger2">X</button>
+            <h3>Veuillez prendre en compte :</h3>
+            <ul>
+                <li>Loyer</li>
+                <li>Prêt Immobilier</li>
+                <li>Prêt Auto</li>
+                <li>Assurance Immobilière/Auto/Moto</li>
+                <li>Assurance Voiture</li>
+                <li>Assurance Moto</li>
+                <li>Mutuelle</li>
+                <li>Service de streaming :</li>
+                <li>Et tout autre type de dépenses régulières</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

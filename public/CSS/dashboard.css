@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.container-dasboard {
+    background: #f1f1f1;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.side-nav {
+    position: fixed;
+    height: 100vh;
+    left: 2%;
+    top: 2%;
+}
+
+.wrapper {
+    background: white;
+    border-radius: 9px;
+    height: 96vh;
+    width: 300px;
+}
+
+.titre-app-dashboard {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imgCompte {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+.imgCompte img {
+    border-radius: 10%;
+    height: 90px;
+    width: 90px;
+    border: solid 1px white;
+    box-shadow: -1px 10px 26px -10px #000000;;
+}
+
+.bienvenus-dashboard {
+    text-align: center;
+}
+
+#welcome {
+    color: #868686;
+}
+
+#welcome-Nom {
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.argent-economise {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.chiffre-economise {
+    color: #4e8ff6;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nav-bloc-container {
+    margin: 12% 0 0 0;
+}
+
+.nav-bloc {
+    padding: 8% 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.logo-menu {
+    margin: 0 20px 0 45px;
+    height: 20px;
+    width: 20px;
+}
+
+.label-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #AAAAAA;
+}
+
+.label-nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #4e8ff6;
+    transition: width 0.2s ease-in-out;
+}
+
+.label-nav a:hover::after {
+    width: 30%;
+}
+
+.label-nav a:hover {
+    color: #212121;
+}
+
+.logo-menu img {
+    width: 20px;
+    height: auto;
+}
+
+.logout {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.logout a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #AAAAAA;
+
+}
+
+.bandeau {
+    background: rgba(131, 204, 248, 0.79);
+    height: 15%;
+    width: 100%;
+}
+
+.recapitulatif-container {
+    position: relative;
+    width: 75%;
+    height: 70%;
+    top: 10%;
+    left:22%;
+}
+
+.recapitulatif {
+    line-height: 3em;
+    margin:30px 0 0 10%;
+}
+
+.recapitulatif span {
+    font-weight: bold;
+}
+
+.titre-menu {
+    margin:0 0 0 10%;
+    color: #212121;
+    font-size: 30px;
+}
+
+.titre-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    height: 3px;
+    background: #4e8ff6;
+}
+
+.nombre {
+    color: #4e8ff6;
+}
+
+.infos-recapitulatif {
+    font-size: 25px;
+}
+
+#methodeEconomie {
+    font-size: 13px;
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.add-economie {
+    margin-top: 30px;
+    line-height: 1.5em;
+    font-size: 23px;
+}
+
+.add-economie input {
+    font-size: 23px;
+    font-weight: bolder;
+    color: #4e8ff6;
+    height: 38px;
+    width: 160px;
+    margin-right: 5px;
+}
+
+#label-argent-eco {
+    display: flex;
+    margin-top: 10px;
+}
+
+#label-argent-eco input {
+    border-radius: 5px;
+    border: 1px solid #4e8ff6;
+}
+
+#label-argent-eco input:focus {
+    outline: none;
+    border: 2px solid #4e8ff6;
+
+}
+
+.btn-ajouter {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px;
+    height: 33px;
+    width: 120px;
+    border-radius: 6px;
+    background: #85a7ff;
+    color: #f1f1f1;
+    border: none;
+}
+
+
+
